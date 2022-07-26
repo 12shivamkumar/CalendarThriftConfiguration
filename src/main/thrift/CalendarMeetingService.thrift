@@ -33,6 +33,18 @@ struct EmployeeAvailabilityDataRequest{
     3:Time endTime
     4:Date dateOfMeeting
 }
+struct FindFreeMeetingRoomDataRequest{
+    list<i32> meetingRoomsInOffice;
+    Date dateOfMeeting;
+    Time startTime;
+    Time endTime;
+}
+struct MeetingRoomAvailableDataRequest{
+    i32 roomId;
+    Date dateOfMeeting;
+    Time startTime;
+    Time endTime;
+}
 service MeetingSvc
 {
    bool cancelMeetingOfRemovedEmployee(1:string employeeId);
@@ -44,5 +56,9 @@ service MeetingSvc
    string addMeetingDetails(1:MeetingDetails meetingDetails);
 
    bool addEmployeeMeetingStatus(1:list<EmployeeStatusDataRequest> employeeMeetingStatus);
+
+   i32 findFreeMeetingRoom(1:FindFreeMeetingRoomDataRequest findFreeMeetingRoomDataRequest);
+
+   bool meetingRoomAvailable(1:MeetingRoomAvailableDataRequest meetingRoomAvailableDataRequest);
 
 }
