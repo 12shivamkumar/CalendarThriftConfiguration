@@ -41,7 +41,7 @@ service MeetingSvc
 
    list<string> checkEmployeeAvailability(1:EmployeeAvailabilityDataRequest employeeDetails);
 
-   bool addMeetingDetails(1:MeetingDetails meetingDetails);
+   string addMeetingDetails(1:MeetingDetails meetingDetails);
 
    bool addEmployeeMeetingStatus(1:list<EmployeeStatusDataRequest> employeeMeetingStatus);
 
