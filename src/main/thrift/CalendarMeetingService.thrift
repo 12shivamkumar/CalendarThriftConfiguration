@@ -11,7 +11,7 @@ struct Time{
 }
 
 struct MeetingDetails{
-    1:string id;
+    1:list<string> listOfEmployee;
     2:string description;
     3:string agenda;
     4:string ownerId;
