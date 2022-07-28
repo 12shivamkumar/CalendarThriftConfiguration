@@ -57,8 +57,6 @@ service MeetingSvc
 
    string addMeetingDetails(1:MeetingDetails meetingDetails);
 
-   bool addEmployeeMeetingStatus(1:list<EmployeeStatusDataRequest> employeeMeetingStatus);
-
    i32 findFreeMeetingRoom(1:FindFreeMeetingRoomDataRequest findFreeMeetingRoomDataRequest);
 
    bool meetingRoomAvailable(1:MeetingRoomAvailableDataRequest meetingRoomAvailableDataRequest);
