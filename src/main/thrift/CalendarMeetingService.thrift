@@ -21,6 +21,17 @@ struct MeetingDetails{
     8:bool isAvailable;
     9:i32 roomId;
 }
+struct EmployeeMeetingDetails{
+    1:string status;
+    2:string description;
+    3:string agenda;
+    4:string ownerId;
+    5:Date dateOfMeeting;
+    6:Time startTime;
+    7:Time endTime;
+    8:bool isAvailable;
+    9:i32 roomId;
+}
 struct EmployeeStatusDataRequest {
     1:string employeeId;
     2:string meetingId;
@@ -57,10 +68,10 @@ service MeetingSvc
 
    string addMeetingDetails(1:MeetingDetails meetingDetails);
 
-   bool addEmployeeMeetingStatus(1:list<EmployeeStatusDataRequest> employeeMeetingStatus);
-
    i32 findFreeMeetingRoom(1:FindFreeMeetingRoomDataRequest findFreeMeetingRoomDataRequest);
 
    bool meetingRoomAvailable(1:MeetingRoomAvailableDataRequest meetingRoomAvailableDataRequest);
+
+   list<EmployeeMeetingDetails> getEmployeeMeetingDetails(1:string employeeId);
 
 }
