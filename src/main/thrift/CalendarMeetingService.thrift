@@ -55,7 +55,7 @@ service MeetingSvc
 
    list<string> checkEmployeeAvailability(1:EmployeeAvailabilityDataRequest employeeDetails);
 
-   string addMeetingDetails(1:MeetingDetails meetingDetails);
+   i32 addMeetingDetails(1:MeetingDetails meetingDetails);
 
    i32 findFreeMeetingRoom(1:FindFreeMeetingRoomDataRequest findFreeMeetingRoomDataRequest);
 
