@@ -73,6 +73,6 @@ service MeetingSvc
 
    bool meetingRoomAvailable(1:MeetingRoomAvailableDataRequest meetingRoomAvailableDataRequest);
 
-   list<EmployeeMeetingDetails> getEmployeeMeetingDetails(1:string employeeId);
+   list<EmployeeMeetingDetails> getEmployeeMeetingDetails(1:string employeeId,2:Date customDate);
 
 }
